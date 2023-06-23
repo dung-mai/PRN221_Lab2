@@ -1,0 +1,203 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DalatFarm</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DalatFarm.styles.css" asp-append-version="true" />*@
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="~/lib/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <script src="https://kit.fontawesome.com/cc5cf43e7a.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css">
+    <link type="text/css" rel="stylesheet" href="~/css/pagger.css">
+</head>
+<body>
+    <style>
+        .cart-number {
+            color: rgb(36, 36, 36);
+            background: rgb(253, 216, 53);
+            height: 20px;
+            right: 20px;
+            top: 15px;
+            border-radius: 40px;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            position: relative;
+            padding: 0px 7px;
+        }
+
+        .others li > a > i {
+            font-size: 30px;
+        }
+
+        .sub-menu {
+            top: 60px;
+        }
+
+        .user-sub-menu {
+            right: 140px;
+        }
+    </style>
+    <header id="header">
+        <div class="logo">
+            <img src="~/img/logo.jpg" title="Vườn rau">
+        </div>
+
+        <div class="header header_menu">
+            <li>
+                <a asp-page="/Home/Index">TRANG CHỦ</a>
+            </li>
+            <li><a href="#">GIỚI THIỆU</a></li>
+            <li class="product">
+                <a asp-page="/Product/Shop">
+                    SẢN PHẨM
+                    <i class="fas fa-angle-down"></i>
+                </a>
+                <ul class="sub-menu">
+                    @foreach (CategoryDTO category in Model.Categories)
+                    {
+                        <li><a asp- asp-page="/Product/Shop" asp-route-cid="@category.CategoryId">@category.CategoryName</a></li>
+                    }
+                </ul>
+            </li>
+            <li><a href="#">MẸO HAY</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
+        </div>
+
+        <div id="1" class="others">
+            <li>
+                <form role="search" method="POST" class="searchform" asp-page="/Product/Shop" asp-page-handler="Search">
+                    <input oninput="filterPrice(${requestScope.cid}, ${requestScope.totalpage}, ${requestScope.pagesize}, ${requestScope.orderBy})" id="searchbar" type="text" name="q" placeholder="Tìm kiếm sản phẩm" required value="">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </li>
+            <li class="account">
+                <a href="#" class="login">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Đăng nhập</span>
+                </a>
+            </li>
+            <li id="cart-header">
+                @await Component.InvokeAsync("CartNumber")
+            </li>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <partial name="_Notification" />
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-left">
+                <div class="logo">
+                    <img src="~/img/mona.png" alt="">
+                </div>
+                <div class="contact-info">
+                    <div class="address">
+                        <p><i class="fas fa-location-dot"></i> Số 14c QL21, Thôn 3, Thạch Hòa, Thạch Thất, Tp.Hà Nội</p>
+                    </div>
+                    <div class="phone-number">
+                        <i class="fas fa-phone"></i>
+                        <span> +84961595581</span>
+                    </div>
+                    <div class="email">
+                        <i class="fas fa-envelope"></i> <span> maivandungdungdung@gmail.com</span> <br />
+                        <i class="fas fa-envelope"></i> <span> dungmvhe163263@fpt.edu.vn</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <div class="ft-center-item">
+                    <div class="sub-section_title ft-center-item_title">
+                        <h4>Giới thiệu</h4>
+                    </div>
+                    <div class="ft-center-item_list">
+                        <div class="ft-center-item_detail">
+                            <ul>
+                                <li><a href="">Về Dalat Farm</a></li>
+                                <li><a href="">Tuyển dụng</a></li>
+                                <li><a href="">Hệ thống cửa hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item -->
+
+                <div class="ft-center-item">
+                    <div class="sub-section_title ft-center-item_title">
+                        <h4>Dịch vụ khách hàng</h4>
+                    </div>
+                    <div class="ft-center-item_list">
+                        <div class="ft-center-item_detail">
+                            <ul>
+                                <li><a href="">Chính sách điều khoản</a></li>
+                                <li><a href="">Hướng dẫn mua hàng</a></li>
+                                <li><a href="">Chính sách thanh toán</a></li>
+                                <li><a href="">Chính sách đổi trả</a></li>
+                                <li><a href="">Chính sách giao hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item -->
+
+                <div class="ft-center-item">
+                    <div class="sub-section_title ft-center-item_title">
+                        <h4>Sản phẩm</h4>
+                    </div>
+                    <div class="ft-center-item_list">
+                        <div class="ft-center-item_detail">
+                            <ul>
+                                @foreach (CategoryDTO category in Model.Categories)
+                                {
+                                    <li><a asp-controller="Product" asp-action="Index" asp-route-cid="@category.CategoryId">@category.CategoryName</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item -->
+            </div>
+
+            <div class="footer-right">
+                <div class="dangki-email">
+                    <div class="sub-section_title box-text">
+                        <h4>Đăng kí</h4>
+                        <p>Đăng ki để nhận được thông tin mới nhất từ chúng tôi.</p>
+                    </div>
+                    <div class="form">
+                        <form method="POST" class="email-receive-form" action="">
+                            <input type="text" name="reg-email" placeholder="Email ...">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="social-icon">
+                        <img src="~/img/ic_fb (1).svg" alt="Facebook" title="Follow on Facebook">
+                        <img src="~/img/ic_instagram.svg" alt="ic_instagram" title="Follow on Instagram">
+                        <img src="~/img/ic_pinterest.svg" alt="ic_pinterest" title="Follow on Printerest">
+                        <img src="~/img/ic_ytb.svg" alt="youtube" title="Follow on youtube">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-footer">
+            <p>© Bản quyền thuộc về Mai Van Dung</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

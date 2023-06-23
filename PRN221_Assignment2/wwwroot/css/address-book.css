@@ -1,0 +1,122 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 6, 2022, 10:35:16 PM
+    Author     : Admin
+*/
+body {
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.content-header {
+    text-align: left;
+    margin: 30px 30px 0px;
+}
+
+.content-header h2 {
+    padding-left: 40px;
+    text-align: left;
+    font-size: 26px;
+}
+
+.address-book {
+    padding: 10px 60px;
+    background: rgb(245, 245, 250);
+    min-height: 500px;
+}
+.address-book .heading {
+    font-size: 19px;
+    line-height: 21px;
+    font-weight: 300;
+    margin: 20px 0px 15px;
+}
+
+.address-book .new a {
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    height: 60px;
+    border: 1px dashed rgb(216, 216, 216);
+    margin: 0px 0px 10px;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+}
+.address-book a {
+    color: rgb(11, 116, 229);
+    text-decoration: none;
+}
+.address-book .item .delete {
+    font-size: 14px;
+    color: rgb(255, 66, 78);
+    border: 0px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    outline: 0px;
+}
+
+.address-book .item {
+    background-color: rgb(255, 255, 255);
+    padding: 17px;
+    border-radius: 4px;
+    margin: 0px 0px 10px;
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.address-book .item .name {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px 0px 10px;
+}
+.address-book .item .address {
+    margin: 0px 0px 5px;
+    height: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.address-book .item .name > span {
+    font-size: 12px;
+    margin: 0px 0px 0px 15px;
+    display: inline-block;
+    -moz-box-align: center;
+    align-items: center;
+    color: rgb(38, 188, 78);
+    text-transform: none;
+}
+
+
+.action form {
+    display: inline-block;
+}
+
+.address-book .item .address span {
+    color: rgb(120, 120, 120);
+}
+
+.address-book .item .edit {
+    font-size: 14px;
+    color: rgb(27, 168, 255);
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+.address-book .item .delete {
+    font-size: 14px;
+    color: rgb(255, 66, 78);
+    border: 0px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    outline: 0px;
+}

@@ -1,0 +1,513 @@
+﻿@page "/product"
+@model PRN221_Assignment2.Pages.Product.ProductDetailModel
+
+@{
+    ViewData["Title"] = @Model?.Product?.ProductName;
+}
+<head>
+    <link type="text/css" rel="stylesheet" href="~/css/product-detail.css">
+</head>
+
+
+<style>
+    .comment-item-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dropdown-toggle {
+        white-space: nowrap;
+    }
+
+        .dropdown-toggle::after {
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        .dropdown-toggle:empty::after {
+            margin-left: 0;
+        }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        min-width: 10rem;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        font-size: 1rem;
+        color: #141432;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: .25rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
+    }
+
+        .dropdown-menu[style] {
+            right: auto !important;
+        }
+
+    .btn-light {
+        padding: 5px;
+        color: #000;
+        background-color: #f8f9fa;
+        border-color: #f8f9fa;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+    }
+
+        .btn-light:hover {
+            color: #000;
+            background-color: #f9fafb;
+            border-color: #f9fafb;
+        }
+
+        .btn-check:focus + .btn-light, .btn-light:focus {
+            color: #000;
+            background-color: #f9fafb;
+            border-color: #f9fafb;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075),0 0 0 4px rgba(211,212,213,.5);
+        }
+
+        .btn-check:checked + .btn-light, .btn-check:active + .btn-light, .btn-light:active, .btn-light.active, .show > .btn-light.dropdown-toggle {
+            color: #000;
+            background-color: #f9fafb;
+            border-color: #f9fafb;
+        }
+
+            .btn-check:checked + .btn-light:focus, .btn-check:active + .btn-light:focus, .btn-light:active:focus, .btn-light.active:focus, .show > .btn-light.dropdown-toggle:focus {
+                box-shadow: inset 0 3px 5px rgba(0,0,0,.125),0 0 0 4px rgba(211,212,213,.5);
+            }
+
+        .btn-light:disabled, .btn-light.disabled {
+            color: #000;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1rem;
+        clear: both;
+        font-weight: 400;
+        color: #141432;
+        text-align: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            color: #12122d;
+            background-color: #f8f9fa;
+        }
+
+        .dropdown-item.active, .dropdown-item:active {
+            color: #fff;
+            text-decoration: none;
+            background-color: #3167eb;
+        }
+
+        .dropdown-item.disabled, .dropdown-item:disabled {
+            color: #6c757d;
+            pointer-events: none;
+            background-color: transparent;
+        }
+
+    .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
+        color: #fff;
+        background-color: rgba(255,255,255,.15);
+    }
+
+    .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
+        color: #fff;
+        background-color: #3167eb;
+    }
+
+    .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
+        color: #adb5bd;
+    }
+
+    .text-danger {
+        color: #f30000 !important;
+    }
+</style>
+
+<div class="breadcrumb">
+    <a asp-page="/Home/Index" class="breadcrumb-item">
+        <span>Trang chủ </span>
+    </a>
+    <span class="icon icon-next"><i class="fas fa-solid fa-angle-right"></i></span>
+    <a asp-page="/Product/Shop" asp-route-cid="@(Model?.Product?.CategoryId)" class="breadcrumb-item">
+        <span>@(Model.Product?.Category?.CategoryName)</span>
+    </a>
+    <span class="icon icon-next"><i class="fas fa-solid fa-angle-right"></i></span>
+    <a href="" class="breadcrumb-item">
+        <span>@Model.Product?.ProductName</span>
+    </a>
+</div>
+
+
+@if (Model?.Product == null)
+{
+    <h1 style="height: 500px">Sản phẩm này không tồn tại</h1>
+}
+else
+{
+    <div class="product-content section">
+        <div class="product-content-left">
+            <div class="product-content-left-big-image">
+                <img src="@Model.Product.ImgUrl" alt="" id="product-left-big-image">
+            </div>
+            <div class="product-content-left review-image__list">
+                <div class="image-container">
+                    <img src="@Model.Product.ImgUrl" alt="Hinh anh san pham" onclick="changeImage(this);">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-content-right">
+            <div class="product-content-right-product-name">
+                <h3>@Model.Product.ProductName</h3>
+            </div>
+            <div class="product-rating">
+                <div class="rating">
+                    <i class="fa-solid fa-star check"></i>
+                    <i class="fa-solid fa-star check"></i>
+                    <i class="fa-solid fa-star check"></i>
+                    <i class="fa-solid fa-star check"></i>
+                    <i class="fa-solid fa-star check"></i>
+                </div>
+                <span>Đã bán @Model.Product.UnitsOnOrder</span>
+            </div>
+
+            <div class="product-price">
+                <div class="product-price__current-price">@(Model.Product.PromotionPrice) $</div>
+                <div class="product-price__init-price">@(Model.Product.UnitPrice) $</div>
+                <div class="product-price__discount-rate">-@(100 - (100 * Model.Product.PromotionPrice / Model.Product.UnitPrice))%</div>
+            </div>
+
+            <div class="quantity-button">
+                <span>Số lượng</span>
+                <input type="button" value="-" class="minus button" onclick="adjustQuantityButton(this)">
+                <input class="quantity-display" type="number" min="1" max="999" name="quantity" value="1" size="4" pattern="[0-9]*"
+                       inputmode="numeric" title="SL">
+                <input type="button" value="+" class="plus button" onclick="adjustQuantityButton(this)">
+            </div>
+
+            <div class="add-to-cart">
+                @if (Model.Product.UnitsInStock > 0)
+                {
+                    <button type="submit" class="btn-add-to-cart">Thêm vào giỏ</button>
+                }
+                else
+                {
+                    <div class="btn-add-to-cart">Đã hết hàng</div>
+                }
+            </div>
+            <input type="hidden" name="pid" value="${requestScope.product.product_id}">
+            <div class="style__StyledCustomerBenefits-sc-4w35vj-0 dcoZYl">
+                <div class="benefit-item">
+                    <img alt="compensation-icon"
+                         src="https://salt.tikicdn.com/ts/upload/2c/48/44/720434869e103b03aaaf1a104d91ad25.png"
+                         height="32" width="32"><span>Hoàn tiền<br><b>111%</b><br>nếu hàng giả</span>
+                </div>
+                <div class="benefit-item">
+                    <img alt="compensation-icon"
+                         src="https://salt.tikicdn.com/ts/upload/4b/a1/23/1606089d5423e5cba05e3820ad39708e.png"
+                         height="32" width="32"><span>Mở hộp<br>kiểm tra<br>nhận hàng</span>
+                </div>
+                <div class="benefit-item">
+                    <img alt="compensation-icon"
+                         src="https://salt.tikicdn.com/ts/upload/63/75/6a/144ada409519d72e2978ad2c61bc02a7.png"
+                         height="32" width="32"><span>Đổi trả trong<br><b>30 ngày</b><br>nếu sp lỗi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ADDITION INFORMATION-->
+    <div class="product-detail-addtion">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item nav-infor">
+                <a class="nav-link active" id="infor-tab" role="tab" aria-controls="home" aria-selected="true">Thông tin thực phẩm</a>
+            </li>
+
+            <li class="nav-item nav-review">
+                <a class="nav-link" id="review-tab" role="tab" aria-controls="profile">Bình luận</a>
+            </li>
+        </ul>
+
+        <div class="content-box">
+            <div class="product-infor">
+@*                @(Html.Raw(Model.Detail))
+*@            </div>
+            <div class="review-rating" style="display:none;">
+
+                <!--REVIEW OVERVIEW-->
+                <div class="product-rating-overview">
+                    <div class="review-rating__summary">
+                        <div class="review-rating__point">4</div>
+                        <div class="review-rating__stars">
+                            <div class="star-container">
+                            </div>
+                            <div class="review-rating__total">0 nhận xét</div>
+                        </div>
+                    </div><!-- SUMary end -->
+
+                    <div class="review-rating__detail">
+                        <div class="review-rating__level">
+                            <div class="star-container">
+                            </div>
+                            <div class="style__StyledProcessBar-sc-10ol6xi-2 irgthR">
+                            </div>
+                            <div class="review-rating__number">0</div>
+                        </div>
+                    </div>
+                    <div class="review-rating__btn" onclick="openReviewBox()">Viết Đánh Giá</div>
+                </div>   <!-- End rating HEADER -->
+                <h2>  Chưa có đánh giá nào cho sản phẩm này</h2>
+
+                <div class="write-review">
+                    <div class="header">
+                        <p>Đánh giá sản phẩm</p>
+                        <div class="close" onclick="closeReviewBox()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <form action="${context}/product/review" method="post">
+                        <div class="star-box">
+                            <div class="stars" onclick="changeContent()">
+                                <input class="star star-5" id="star-5" type="radio" name="star" required="" value="5" />
+                                <label class="star star-5" for="star-5"></label>
+                                <input class="star star-4" id="star-4" type="radio" name="star" value="4" />
+                                <label class="star star-4" for="star-4"></label>
+                                <input class="star star-3" id="star-3" type="radio" name="star" value="3" />
+                                <label class="star star-3" for="star-3"></label>
+                                <input class="star star-2" id="star-2" type="radio" name="star" value="2" />
+                                <label class="star star-2" for="star-2"></label>
+                                <input class="star star-1" id="star-1" type="radio" name="star" value="1" />
+                                <label class="star star-1" for="star-1"></label>
+                            </div>
+                            <span class="star-content"></span>
+                        </div>
+                        <textarea rows="3" required="" name="reviewDetail" placeholder="Chia sẻ thêm đánh giá về sản phẩm" class="write-review__input"></textarea>
+                        <button type="submit" class="write-review__button write-review__button--submit">
+                            <span>Gửi đánh giá</span>
+                        </button>
+                        <input type="hidden" name="pid" value="${requestScope.product.product_id}">
+                    </form>
+                </div>
+
+                <!-- COMMENT LIST -->
+                <div class="comment__list">
+                    <div class="comment-item-box">
+                        <div class="shop-product-rating">
+                            <div class="shop-avatar">
+                                <img src="${context}/images/avatardefault.png">
+                                <span class="shop-product-rating__author-name">${review.name}</span>
+                            </div>
+                            <div class="shop-product-rating__main" id="old-comment${review.review_id}">
+                                <div class="repeat-purchase-con">
+                                    <div class="shop-product-rating__rating">
+                                        <span>
+                                            <c:forEach begin="1" end="${review.rating}">
+                                                <i class="fa-solid fa-star check"></i>
+                                            </c:forEach>
+                                            <c:forEach begin="${review.rating + 1}" end="5">
+                                                <i class="fa-solid fa-star"></i>
+                                            </c:forEach>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="shop-product-rating__time">
+                                    ${review.created_at}
+                                    <div class="review-comment__seller-name">
+                                        <span class="review-comment__check-icon"></span>Đã mua hàng
+                                    </div>
+                                </div>
+                                <div class="Em3Qhp">${review.detail}</div>
+                            </div>
+                            <c:if test="${sessionScope.user.user_id == review.user_id}">
+                                <form action="${context}/product/review" method="post" id="change-review-form${review.review_id}" style="display: none;min-width: 500px;">
+                                    <div class="star-box">
+                                        <div class="stars">
+                                            <c:forEach begin="1" end="5" varStatus="loop">
+                                                <input class="star star-${6 - loop.count}" id="star-${review.review_id}-${6 - loop.count}" type="radio" name="star" required="" value="${6 - loop.count}" ${review.rating= =(6 - loop.count)?'checked':''} />
+                                                <label class="star star-${6 - loop.count}" for="star-${review.review_id}-${6 - loop.count}" onclick="document.getElementById('star-${review.review_id}-${6 - loop.count}').checked = true;"></label>
+                                            </c:forEach>
+                                        </div>
+                                        <span class="star-content"></span>
+                                    </div>
+                                    <textarea style="display: inline-block" required="" name="reviewDetail" class="write-review__input">${review.detail}</textarea>
+                                    <button type="submit" class="btn" style="color: #fff; background: #0080ff;" style="display: inline-block">
+                                        <span>Gửi</span>
+                                    </button>
+                                    <span class="btn" style="color: #fff;background: #d8b83dfc;padding: 0 3px;margin-left: 10px;" style="display: inline-block" onclick="cancelChangeComment(${review.review_id})">
+                                        <span>Hủy</span>
+                                    </span>
+                                    <input type="hidden" value="true" name="update">
+                                    <input type="hidden" name="rid" value="${review.review_id}">
+                                    <input type="hidden" name="pid" value="${requestScope.product.product_id}">
+                                </form>
+                            </c:if>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="" data-bs-toggle="dropdown" class="btn btn-light">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item" onclick="changeComment(${review.review_id})">Chỉnh sửa</div>
+                                <form action="/product/review" method="post" onsubmit="return confirm('Bạn có thực sự muốn xóa?');">
+                                    <input type="hidden" name="delete" value="true">
+                                    <input type="hidden" name="pid" value="${requestScope.product.product_id}">
+                                    <input type="hidden" name="rid" value="${review.review_id}">
+                                    <button class="dropdown-item text-danger" type="submit">Xóa</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END comment LIST -->
+            </div>   <!-- END REVIEW RATING ALL-->
+        </div>  <!-- END Content -->
+    </div>
+}
+
+<script>
+    function changeComment(id) {
+        document.getElementById('change-review-form' + id).style.display = 'block';
+        document.getElementById('old-comment' + id).style.display = 'none';
+    }
+
+    function cancelChangeComment(id) {
+        document.getElementById('change-review-form' + id).style.display = 'none';
+        document.getElementById('old-comment' + id).style.display = 'block';
+    }
+
+    function changeContent() {
+        const content = document.querySelector('.star-content');
+        var stars = document.querySelectorAll('input[name="star"]');
+        for (let radio of stars) {
+            if (stars[4].checked == true) {
+                content.innerHTML = 'Rất tệ';
+            } else if (stars[3].checked == true) {
+                content.innerHTML = 'Không hài lòng';
+            } else if (stars[2].checked == true) {
+                content.innerHTML = 'Bình thường';
+            } else if (stars[1].checked == true) {
+                content.innerHTML = 'Hài lòng';
+            } else if (stars[0].checked == true) {
+                content.innerHTML = 'Rất hài lòng';
+            }
+        }
+    }
+
+    function openReviewBox() {
+        document.querySelector('.write-review').style.display = "block";
+    }
+
+    function closeReviewBox() {
+        document.querySelector('.write-review').style.display = "none";
+    }
+
+    const infor_content = document.querySelector('.product-infor');
+    const review_content = document.querySelector('.review-rating');
+    const infor = document.querySelector('#infor-tab');
+    const review = document.querySelector('#review-tab');
+    document.querySelector('#infor-tab').addEventListener("click", () => {
+        infor_content.style.display = "block";
+        review_content.style.display = "none";
+        if (!infor.classList.contains('active')) {
+            infor.classList.add('active');
+            review.classList.remove('active');
+        }
+    });
+    document.querySelector('#review-tab').addEventListener("click", () => {
+        infor_content.style.display = "none";
+        review_content.style.display = "block";
+        if (!review.classList.contains('active')) {
+            review.classList.add('active');
+            infor.classList.remove('active');
+        }
+    });
+
+    function changeImage(img) {
+        var bigpic = document.getElementById('product-left-big-image');
+        bigpic.src = img.src;
+    }
+
+    function adjustQuantityButton(button) {
+        const input = document.querySelector('.quantity-display');
+        if (button.value === '+') {
+            if (parseInt(input.value) >= @Model?.Product.UnitsInStock) {
+                input.value = parseInt(input.value) + 1;
+            }
+        } else {
+            if (parseInt(input.value) <= 1) {
+                input.value = 1;
+            } else {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+    }
+</script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js" type="text/javascript"></script>
+<script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $('.review-image__list').slick({
+        infinite: false,
+        variableWidth: false,
+        speed: 400,
+        arrow: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplaySpeed: 2000,
+        prevArrow: "<button type='button' class='slick-prev slick-arrow'><i class='fa fa-arrow-left' aria-hidden='true'></i></button>",
+        nextArrow: "<button type='button' class='slick-next slick-arrow'><i class='fa fa-arrow-right' aria-hidden='true'></i></button>"
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $("button.btn-add-to-cart").click(function () {
+            $.ajax({
+                url: '/product?handler=AddToCart',
+                type: "POST",
+                dataType: "JSON",
+                data: {
+                    quantity: parseInt($('input[name="quantity"]').val()),
+                    productId: @Model?.Product?.ProductId
+                },
+                headers: {
+                    RequestVerificationToken:
+                        $('input:hidden[name="__RequestVerificationToken"]').val()
+                },
+                success: function (result) {
+                    $('#cart-header').load("/product?handler=UpdateCartNumberComp");
+                    if (result.success) {
+                        alert(okay);
+                    }
+                },
+                error: function (xhr) {
+                    alert("Cập nhật cart lỗi roi");
+                }
+            });
+    });
+</script>

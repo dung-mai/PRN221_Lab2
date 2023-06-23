@@ -1,0 +1,181 @@
+﻿@page "/shop"
+@model PRN221_Assignment2.Pages.Product.ShopModel
+
+@{
+    ViewData["Title"] = "Cửa hàng";
+}
+
+<style>
+    body {
+        background-color: white;
+    }
+
+    .active-category {
+        background-color: var(--clr-green);
+        color: #fff;
+    }
+</style>
+
+<!-- BreadCrum -->
+<div class="section page-title">
+    <div class="page-title-inner">
+        <a asp-page="/Home/Index">Trang chủ</a>
+        <span class="divider">/</span>
+        Cửa hàng
+    </div>
+
+    <div class="category-filter">
+        <select name="orderBy" class="order-by" onchange="this.form.submit();" form="main-form" style="float:right;">
+            @if (ViewBag.SelectSort != null && ViewBag.SelectSort == 2)
+            {
+                <option name="price-asc" value="1">Thứ tự theo giá: thấp đến cao</option>
+                <option name="price-desc" selected value="2">Thứ tự theo giá: cao xuống thấp</option>
+            }
+            else
+            {
+                <option name="price-asc" selected value="1">Thứ tự theo giá: thấp đến cao</option>
+                <option name="price-desc" value="2">Thứ tự theo giá: cao xuống thấp</option>
+            }
+        </select>
+    </div>
+</div>
+
+
+<!---------- MAIN PRODUCT PAGE -------------->
+<div class="section product-page">
+
+    <!--SHOP SIDEBAR - Danh muc san pham -->
+    <div class="shop-sidebar-container">
+        <aside class="shop-sidebar sidebar-category">
+            <div class="sidebar_header sidebar-category_header">
+                <span>Danh mục sản phẩm</span>
+            </div>
+            <ul class="sidebar-category_list">
+                @foreach (CategoryDTO category in Model.Categories)
+                {
+                    <li class="">
+                        <!--active-category-->
+                        <a asp-page="/Product/Shop" asp-route-cid="@category.CategoryId">@category.CategoryName</a>
+                    </li>
+                }
+            </ul>
+        </aside> <!-- first box -->
+        <!-- filter -->
+        <aside class="shop-sidebar sidebar-filter">
+            <div class="sidebar_header sidebar-filter_header">
+                <span>LỌC THEO GIÁ</span>
+            </div>
+            @* <form method="POST">
+            <label for="amount">Price range:</label>
+            <!--            <input type="text" id="amount" name="filter" style="border:0; color:#f6931f; font-weight:bold;">
+            <input type="submit" value="LỌC">-->
+            <div class="range-filter">
+            <div class="price-input">
+            <div class="field">
+            <span>Min</span>
+            <input oninput="filterPrice(${requestScope.cid}, ${requestScope.totalpage}, ${requestScope.pagesize}, ${requestScope.orderBy})"
+            type="number" id="inputmin" class="input-min" name="inputmin" value="${requestScope.inputmin}">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+            <span>Max</span>
+            <input oninput="filterPrice(${requestScope.cid}, ${requestScope.totalpage}, ${requestScope.pagesize}, ${requestScope.orderBy})"
+            type="number" id="inputmax" class="input-max" name="inputmax" value="${requestScope.inputmax}">
+            </div>
+            </div>
+            <div class="display-range">
+            <div class="slider">
+            <div class="progress"></div>
+            </div>
+            <div class="range-input">
+            <input onchange="filterPrice(${requestScope.cid}, ${requestScope.totalpage}, ${requestScope.pagesize}, ${requestScope.orderBy})"
+            type="range" class="range-min" min="0" max="500000" value="${requestScope.inputmin}" step="5000">
+            <input onchange="filterPrice(${requestScope.cid}, ${requestScope.totalpage}, ${requestScope.pagesize}, ${requestScope.orderBy})"
+            type="range" class="range-max" min="0" max="500000" value="${requestScope.inputmax}" step="5000">
+            </div>
+            </div>
+
+            <input type="submit" value="Lọc">
+            </div>
+            </form>*@
+        </aside>
+    </div>
+
+    <!--PRODUCT LIST DISPLAY -->
+    <div class="shop-container">
+        @if (Model.Products == null || Model.Products.Count == 0)
+        {
+            <h1>Không có sản phẩm nào thuộc danh mục này</h1>
+        }
+        else
+        {
+            <div class="shop-container_list" id="product-display">
+                @foreach (ProductDTO p in Model.Products)
+                {
+                    <div class="section_item shop-product product">
+                        <div class="box-image">
+                            <a asp-page="/Product/ProductDetail" asp-route-id="@p.ProductId">
+                                <img src="@(p.ImgUrl)" alt="Product" />
+                            </a>
+                        </div>
+                        <div class="box-text">
+                            <a asp-page="/Product/ProductDetail" asp-route-id="@p.ProductId">
+                                <h4 class="product_title">@p.ProductName</h4>
+                            </a>
+                            @if (p.UnitPrice == p.PromotionPrice)  // ADD PROMOTION PRICE
+                            {
+                                <div class="price-wrapper">
+                                    <span>@(p.UnitPrice) $</span>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="product-price">
+                                    <div class="product-price__current-price">@(p.PromotionPrice) $</div>
+                                    <div class="product-price__discount-rate">
+                                        -@(100 - (100 * p.PromotionPrice / p.UnitPrice)) %
+                                    </div>
+                                </div>
+                            }
+                            <button class="add-to-cart-btn" value="@p.ProductId">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                }
+            </div>
+            <partial name="~/Pages/Shared/_Paging.cshtml" />
+        }
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    Array.from(document.querySelectorAll('.add-to-cart-btn')).forEach(
+        (btn) => {
+            btn.addEventListener('click', function (e) {
+                $.ajax({
+                    url: '/shop?handler=AddToCart',
+                    type: "POST",
+                    data: {
+                        quantity: 1,
+                        productId: parseInt(e.currentTarget.value)
+                    },
+                    dataType: "JSON",
+                    headers: {
+                    RequestVerificationToken: 
+                        $('input:hidden[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (result) {
+                        $('#cart-header').load("/product?handler=UpdateCartNumberComp");
+                        if (result.success) {
+                            alert("Okay!");
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("Cập nhật cart lỗi roi");
+                    }
+                });
+            });
+        }
+    );
+</script>
