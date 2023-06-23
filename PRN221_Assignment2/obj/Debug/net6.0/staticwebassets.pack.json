@@ -1,0 +1,521 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PRN221_Assignment2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PRN221_Assignment2.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\address-book.css",
+      "PackagePath": "staticwebassets\\css\\address-book.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\address-form.css",
+      "PackagePath": "staticwebassets\\css\\address-form.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\pagger.css",
+      "PackagePath": "staticwebassets\\css\\pagger.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\product-detail.css",
+      "PackagePath": "staticwebassets\\css\\product-detail.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\thanhtoan.css",
+      "PackagePath": "staticwebassets\\css\\thanhtoan.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\ui.css",
+      "PackagePath": "staticwebassets\\css\\ui.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a1.jpg",
+      "PackagePath": "staticwebassets\\img\\a1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a1_1.jpg",
+      "PackagePath": "staticwebassets\\img\\a1_1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a2.jpg",
+      "PackagePath": "staticwebassets\\img\\a2.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a2_1.jpg",
+      "PackagePath": "staticwebassets\\img\\a2_1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a3.jpg",
+      "PackagePath": "staticwebassets\\img\\a3.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a3_1.jpg",
+      "PackagePath": "staticwebassets\\img\\a3_1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a4.jpg",
+      "PackagePath": "staticwebassets\\img\\a4.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a4_1.jpg",
+      "PackagePath": "staticwebassets\\img\\a4_1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a5.jpg",
+      "PackagePath": "staticwebassets\\img\\a5.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a5_1.jpg",
+      "PackagePath": "staticwebassets\\img\\a5_1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a6.jpg",
+      "PackagePath": "staticwebassets\\img\\a6.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\a6_1.jpg",
+      "PackagePath": "staticwebassets\\img\\a6_1.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\avatardefault.png",
+      "PackagePath": "staticwebassets\\img\\avatardefault.png"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\banner_super.jpg",
+      "PackagePath": "staticwebassets\\img\\banner_super.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_fb (1).svg",
+      "PackagePath": "staticwebassets\\img\\ic_fb (1).svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_fb (1)_1.svg",
+      "PackagePath": "staticwebassets\\img\\ic_fb (1)_1.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_fb.svg",
+      "PackagePath": "staticwebassets\\img\\ic_fb.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_fb_1.svg",
+      "PackagePath": "staticwebassets\\img\\ic_fb_1.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_instagram.svg",
+      "PackagePath": "staticwebassets\\img\\ic_instagram.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_instagram_1.svg",
+      "PackagePath": "staticwebassets\\img\\ic_instagram_1.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_pinterest.svg",
+      "PackagePath": "staticwebassets\\img\\ic_pinterest.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_pinterest_1.svg",
+      "PackagePath": "staticwebassets\\img\\ic_pinterest_1.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_ytb.svg",
+      "PackagePath": "staticwebassets\\img\\ic_ytb.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\ic_ytb_1.svg",
+      "PackagePath": "staticwebassets\\img\\ic_ytb_1.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\logo.jpg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\img\\mona.png",
+      "PackagePath": "staticwebassets\\img\\mona.png"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\js\\address.js",
+      "PackagePath": "staticwebassets\\js\\address.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\js\\pagger.js",
+      "PackagePath": "staticwebassets\\js\\pagger.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\data.json",
+      "PackagePath": "staticwebassets\\lib\\data.json"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\.gitignore",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\.gitignore"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\CONTRIBUTING.markdown",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\CONTRIBUTING.markdown"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\ISSUE_TEMPLATE.md",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\ISSUE_TEMPLATE.md"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\Makefile",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\README.markdown",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\README.markdown"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\bower.json",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\bower.json"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\component.json",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\component.json"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\index.html",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\index.html"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\package.json",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\package.json"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick.jquery.json",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick.jquery.json"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\config.rb",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\config.rb"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\fonts\\slick.eot"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\fonts\\slick.svg"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\fonts\\slick.woff"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick-theme.less",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick-theme.less"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick-theme.scss",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick-theme.scss"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick.css"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick.js",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick.less",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick.less"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick.min.js"
+    },
+    {
+      "Id": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\lib\\slick-1.8.1\\slick\\slick.scss",
+      "PackagePath": "staticwebassets\\lib\\slick-1.8.1\\slick\\slick.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.PRN221_Assignment2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.PRN221_Assignment2.props",
+      "PackagePath": "build\\PRN221_Assignment2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.PRN221_Assignment2.props",
+      "PackagePath": "buildMultiTargeting\\PRN221_Assignment2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.PRN221_Assignment2.props",
+      "PackagePath": "buildTransitive\\PRN221_Assignment2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

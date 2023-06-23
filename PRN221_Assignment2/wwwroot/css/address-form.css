@@ -1,0 +1,135 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 6, 2022, 10:23:23 PM
+    Author     : Admin
+*/
+
+body {
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.content-header {
+    text-align: left;
+    margin: 30px 30px 0px;
+}
+
+.content-header h2 {
+    padding-left: 40px;
+    text-align: left;
+    font-size: 26px;
+}
+
+.fJeMaX .heading {
+    font-size: 19px;
+    line-height: 21px;
+    font-weight: 300;
+    margin: 20px 0px 15px;
+}
+.fJeMaX .inner {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    min-height: 400px;
+    padding: 30px 20px;
+    padding-left: 60px;
+}
+.fJeMaX form {
+    width: 600px;
+}
+
+.fJeMaX .form-control {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    margin: 0px 0px 15px;
+    border: none;
+    padding: 0;
+}
+
+.fJeMaX .input-label {
+    width: 110px;
+    min-width: 110px;
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+}
+.fJeMaX .form-control > div {
+    display: flex;
+    flex: 1 1 0%;
+    position: relative;
+    z-index: 1;
+}
+.fJeMaX .form-control input {
+    flex: 1 1 0%;
+}
+.girQwT {
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 34px;
+    outline: currentcolor none medium;
+}
+
+.kpLnYz {
+    display: flex;
+    margin-right: 15px;
+}
+
+.kpLnYz .label {
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.fJeMaX .form-control textarea {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    width: 100%;
+    padding: 6px 12px;
+}
+.etNXAi .checkbox-fake {
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgb(120, 120, 120);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 12px 0px 0px;
+    position: relative;
+    z-index: 1;
+    color: rgb(120, 120, 120);
+}
+.etNXAi .label {
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: justify;
+}
+.fJeMaX .btn-submit {
+    border: 0px none;
+    width: 176px;
+    height: 40px;
+    border-radius: 4px;
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    background-color: rgb(253, 216, 53);
+    cursor: pointer;
+}
+.fJeMaX .form-control select {
+    margin: 0;
+    width: 100%;
+    border: 1px solid rgb(204, 204, 204);
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 34px;
+    outline: currentcolor none medium;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0px center;
+    border-radius: 4px;
+    box-shadow: none;
+}
