@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FPTUniversity_Study\Semester_7\PRN221\PRN221_Assignment2\PRN221_Assignment2
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Cart/Process.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxQcm9jZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Cart/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Product/Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxTaG9wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Shared/Components/CartBill/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcQ2FydEJpbGxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Shared/Components/CartList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcQ2FydExpc3RcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FPTUniversity_Study/Semester_7/PRN221/PRN221_Assignment2/PRN221_Assignment2/Pages/Shared/Components/CartNumber/Default.cshtml]

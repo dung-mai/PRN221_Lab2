@@ -12,5 +12,6 @@ namespace Bussiness.IRepository
         List<ProductDTO> GetProducts(int? categoryId);
         List<ProductDTO> GetProducts(int? categoryId, int orderBy);
         ProductDTO? GetProduct(int id);
+        void UpdateUnitInStock(ProductDTO product, int quantity);
     }
 }

@@ -27,5 +27,24 @@ namespace DataAccess.DataAccess.Managers
             }
             return 0;
         }
+
+        public bool AddOrder(Order order)
+        {
+            try
+            {
+                _context.Orders.Add(order);
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int GetLastInsertOrderId()
+        {
+            Order? order = _context.Orders.OrderBy(o => o.OrderId).LastOrDefault();
+            return  order != null ? order.OrderId : 0;
+        }
     }
 }

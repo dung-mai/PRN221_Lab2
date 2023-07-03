@@ -43,7 +43,8 @@ namespace DataAccess.DataAccess.Managers
                 .FirstOrDefault(o => o.ProductId == _product.ProductId);
             if (product != null)
             {
-                Reflection.CopyProperties(_product, product);
+                //Reflection.CopyProperties(_product, product);
+                product.UnitsInStock = _product.UnitsInStock;
                 return 1;
             }
             return 0;

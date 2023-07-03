@@ -50,5 +50,12 @@ namespace Bussiness.Repository
             return _mapper.Map<ProductDTO>(manager.GetProduct(id));
         }
 
+        public void UpdateUnitInStock(ProductDTO product, int quantity)
+        {
+            ProductManager manager = new ProductManager(_context);
+            product.UnitsInStock -= (short)quantity;
+            manager.UpdateProduct(_mapper.Map<Product>(product));
+            _context.SaveChanges();
+        }
     }
 }

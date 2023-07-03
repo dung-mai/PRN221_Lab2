@@ -1,0 +1,32 @@
+﻿
+@model List<CartItem>
+
+<div class=" iRKLRb">
+    <ul class="prices__items">
+        <li class="prices__item">
+            <span class="prices__text">Tạm tính</span>
+            <span class="prices__value">@(Model?.Sum(i => i.Quantity * i.Product.PromotionPrice))$</span>
+        </li>
+        <li class="prices__item">
+            <span class="prices__text">Giảm giá</span>
+            <span class="prices__value">0$</span>
+        </li>
+    </ul>
+    <div class="prices__total">
+        <span class="prices__text">Tổng tiền</span>
+        <div class="prices__content">
+            <span class="prices__value prices__value--final">@(Model?.Sum(i => i.Quantity * i.Product.PromotionPrice))$</span>
+            <span class="prices__value--noted">(Đã bao gồm VAT nếu có)</span>
+        </div>
+    </div>
+    <form id="purchase-button" asp-controller="Cart" asp-action="Ordering" method="GET">
+        @if (Model != null && Model.Count > 0)
+        {
+            <button class="bsEPkA" type="submit">Mua Hàng</button>
+        }
+        else
+        {
+            <button class="bsEPkA" disabled="">Mua Hàng</button>
+        }
+    </form>
+</div> <!-- card-body.// -->

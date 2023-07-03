@@ -1,0 +1,49 @@
+﻿@page "/order/success"
+
+@model PRN221_Assignment2.Pages.Cart.SuccessModel
+@{
+    ViewData["Title"] = "Đặt hàng thành công";
+}
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='~/css/bootstrap.css'>
+</head>
+<style>
+
+    .mess {
+        color: #f01414;
+    }
+
+    .order-id span {
+        display: inline-block;
+        padding: 10px 50px;
+        background: #15ad15;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .order-id {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+        .order-id p {
+            font-weight: 600;
+            margin: 0 auto;
+            width: fit-content;
+        }
+</style>
+
+<section class="section-pagetop bg">
+    <div class="container">
+        <div class="mess">
+            <h3 class="my-5">Cảm ơn bạn đã mua hàng tại Hola Farm</h3>
+        </div>
+
+        <div class="order-id">
+            <p>Mã số đơn hàng của bạn</p>
+            <span>@ViewBag.OrderCode</span>
+        </div>
+
+        <a class="my-3 text-center d-block" href="/orders/list">Xem đơn hàng</a>
+    </div> <!-- container //  -->
+</section>

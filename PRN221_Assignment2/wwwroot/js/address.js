@@ -6,7 +6,7 @@ var citis = document.getElementById("city");
 var districts = document.getElementById("district");
 var wards = document.getElementById("ward");
 var Parameter = {
-    url: "https://localhost:7249/lib/data.json", //Đường dẫn đến file chứa dữ liệu hoặc api do backend cung cấp
+    url: "http://localhost:5212/lib/data.json", //Đường dẫn đến file chứa dữ liệu hoặc api do backend cung cấp
     method: "GET", //do backend cung cấp
     responseType: "application/json" //kiểu Dữ liệu trả về do backend cung cấp
 };

@@ -1,6 +1,6 @@
 ﻿@model List<CartItem>
 
-<a asp-controller="Cart" asp-action="Index">
+<a asp-page="/Cart/Index">
     <i class="fa-solid fa-shopping-bag"></i>
     <div>
         @if (Model != null && Model.Count > 0)

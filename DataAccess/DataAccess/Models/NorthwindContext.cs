@@ -83,15 +83,19 @@ namespace DataAccess.DataAccess.Models
 
                 entity.Property(e => e.ShipAddress).HasMaxLength(60);
 
-                entity.Property(e => e.ShipCity).HasMaxLength(15);
+                entity.Property(e => e.ShipCity).HasMaxLength(35);
 
-                entity.Property(e => e.ShipCountry).HasMaxLength(15);
+                entity.Property(e => e.ShipCountry).HasMaxLength(35);
 
                 entity.Property(e => e.ShipName).HasMaxLength(40);
 
                 entity.Property(e => e.ShipPostalCode).HasMaxLength(10);
 
-                entity.Property(e => e.ShipRegion).HasMaxLength(15);
+                entity.Property(e => e.ShipRegion).HasMaxLength(35);
+
+                entity.Property(e => e.Email).HasMaxLength(50);
+
+                entity.Property(e => e.PhoneNumber).HasMaxLength(50);
 
                 entity.Property(e => e.ShippedDate).HasColumnType("datetime");
             });

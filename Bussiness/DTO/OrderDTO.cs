@@ -24,6 +24,8 @@ namespace Bussiness.DTO
         public string? ShipRegion { get; set; }
         public string? ShipPostalCode { get; set; }
         public string? ShipCountry { get; set; }
+        public string? Email { get; set; }
+        public string? PhoneNumber { get; set; }
 
         public virtual ICollection<OrderDetailDTO> OrderDetails { get; set; }
     }
