@@ -2,9 +2,12 @@ using Bussiness.IRepository;
 using Bussiness.Mapping;
 using Bussiness.Repository;
 using DataAccess.DataAccess.Models;
+using Microsoft.AspNetCore.SignalR;
+using PRN221_Assignment2.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
+builder.Services.AddSignalR();
 builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AddPageRoute("/home", "");
@@ -23,6 +26,7 @@ builder.Services.AddSession();
 var app = builder.Build();
 
 app.MapGet("/", () => "home");
+app.MapHub<SignalRServer>("/signalRHub");
 app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();

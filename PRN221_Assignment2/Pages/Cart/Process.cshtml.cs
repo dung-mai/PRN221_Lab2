@@ -2,8 +2,10 @@
 using Bussiness.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
 using PRN221_Assignment2.Extensions;
+using PRN221_Assignment2.Hubs;
 
 namespace PRN221_Assignment2.Pages.Cart
 {
@@ -18,21 +20,30 @@ namespace PRN221_Assignment2.Pages.Cart
         public List<CartItem> Cart { get; set; }
         public List<CartItem> PurchaseCart { get; set; }
 
+        private IHubContext<SignalRServer> _signalRHub;
 
-        public ProcessModel(ICategoryRepository categoryRepository, IOrderDetailRepository orderDetailRepository, IOrderRepository orderRepository, IProductRepository productRepository)
+        public ProcessModel(IHubContext<SignalRServer> hub ,ICategoryRepository categoryRepository, IOrderDetailRepository orderDetailRepository, IOrderRepository orderRepository, IProductRepository productRepository)
         {
             _categoryRepository = categoryRepository;
             _orderDetailRepository = orderDetailRepository;
             _orderRepository = orderRepository;
             _productRepository = productRepository;
+            _signalRHub = hub;
         }
 
-        public void OnGet(int[] purchase_product)
+        public IActionResult OnGet(int[] purchase_product)
         {
             Cart = GetCartFromCookie();
+            if(Cart.Count == 0 || purchase_product.Length == 0)
+            {
+                TempData["error"] = "Vui lòng chọn sản phẩm trước khi đặt hàng!";
+                return RedirectToPage("/Cart/Index");
+            }
+
             PurchaseCart = GetPurchaseCart(purchase_product);
             HttpContext.Session.Set<List<CartItem>>("cart_product_list", PurchaseCart);
             Categories = _categoryRepository.GetCategories();
+            return Page();
         }
 
         private List<CartItem> GetPurchaseCart(int[] purchase_product)
@@ -63,7 +74,7 @@ namespace PRN221_Assignment2.Pages.Cart
             }
         }
 
-        public IActionResult OnPost(string? fullname, string? email, string? phoneNumber, string? address, string? city, string? district, string? ward, string? paymentMedthod)
+        public async Task<IActionResult> OnPost(string? fullname, string? email, string? phoneNumber, string? address, string? city, string? district, string? ward, string? paymentMedthod)
         {
             Cart = GetCartFromCookie();
             PurchaseCart =  HttpContext.Session.Get<List<CartItem>>("cart_product_list");
@@ -72,7 +83,7 @@ namespace PRN221_Assignment2.Pages.Cart
                 //Check if product is availble
                 if (!CheckAvailbleProduct())
                 {
-                    TempData["success"] = "Đặt hàng thất bại!";
+                    TempData["error"] = "Đặt hàng thất bại!";
                     return RedirectToPage("/Cart/Index");
                 }
 
@@ -91,7 +102,7 @@ namespace PRN221_Assignment2.Pages.Cart
 
                 if (!_orderRepository.AddOrder(order))
                 {
-                    TempData["success"] = "Đặt hàng thất bại!";
+                    TempData["error"] = "Đặt hàng thất bại!";
                     return RedirectToPage("/Cart/Index");
                 }
 
@@ -100,9 +111,11 @@ namespace PRN221_Assignment2.Pages.Cart
 
                 TempData["success"] = "Đặt hàng thành công!";
                 UpdateCookie(PurchaseCart);
+
+                await _signalRHub.Clients.All.SendAsync("buy");
                 return RedirectToPage("/Cart/Success", new { code = orderId });
             }
-            TempData["success"] = "Đặt hàng thất bại!";
+            TempData["error"] = "Đặt hàng thất bại!";
             return RedirectToPage("/Cart/Index");
         }
 

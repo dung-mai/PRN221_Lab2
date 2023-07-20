@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KXPcF/XN60AhTBG5kETJRB8ePd07EWzT7325qR30YDQ=",
+  "Hash": "QpLpi6hxShwM++LHkUas4BPIPV/fQsKLVnLVJJG3bP0=",
   "Source": "PRN221_Assignment2",
   "BasePath": "_content/PRN221_Assignment2",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PRN221_Assignment2.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\aspnet\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "PRN221_Assignment2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\",
+      "BasePath": "_content/PRN221_Assignment2",
+      "RelativePath": "aspnet/signalr/dist/browser/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\aspnet\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Identity": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\aspnet\\signalr\\dist\\browser\\signalr.min.js",
+      "SourceId": "PRN221_Assignment2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\",
+      "BasePath": "_content/PRN221_Assignment2",
+      "RelativePath": "aspnet/signalr/dist/browser/signalr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\aspnet\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Identity": "D:\\FPTUniversity_Study\\Semester_7\\PRN221\\PRN221_Assignment2\\PRN221_Assignment2\\wwwroot\\css\\address-book.css",

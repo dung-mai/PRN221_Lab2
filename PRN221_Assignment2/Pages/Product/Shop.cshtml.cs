@@ -4,7 +4,9 @@ using Bussiness.IRepository;
 using DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
+using PRN221_Assignment2.Hubs;
 
 namespace PRN221_Assignment2.Pages.Product
 {
@@ -20,10 +22,13 @@ namespace PRN221_Assignment2.Pages.Product
 
         public int SelectedCategory { get; set; }
 
-        public ShopModel(IProductRepository productRepository, ICategoryRepository categoryRepository)
+        private IHubContext<SignalRServer> _signalRHub;
+
+        public ShopModel(IHubContext<SignalRServer> hub, IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
             _productRepository = productRepository;
+            _signalRHub = hub;
         }
 
         public void OnGet(int? cid)
@@ -47,7 +52,7 @@ namespace PRN221_Assignment2.Pages.Product
             return Page();
         }
 
-        public IActionResult OnPostAddToCart(int? productId, int? quantity = 1)
+        public async Task<IActionResult> OnPostAddToCart(int? productId, int? quantity = 1)
         {
             if (productId == null)
             {
@@ -76,8 +81,7 @@ namespace PRN221_Assignment2.Pages.Product
                     if (findProduct != null)
                     {
                         Reflection.CopyProperties(findProduct, product);
-                        product.Category.Picture = null;
-                        product.Category.Products = null;
+                        product.Category = null;
                     }
                     item = new()
                     {
@@ -86,6 +90,7 @@ namespace PRN221_Assignment2.Pages.Product
                     };
                     cart.Add(item);
                 }
+                await _signalRHub.Clients.All.SendAsync("buy");
                 TempData["success"] = "Thêm vào giỏ hàng thành công!";
                 AddToCookie(cart);
                 return new JsonResult(new { success = true });

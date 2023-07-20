@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 using Bussiness.Repository;
+using Microsoft.AspNetCore.SignalR;
+using PRN221_Assignment2.Hubs;
 
 namespace PRN221_Assignment2.Pages.Cart
 {
@@ -16,12 +18,13 @@ namespace PRN221_Assignment2.Pages.Cart
         private IProductRepository _productRepository;
 
         public List<CartItem> Cart { get; set; }
+        private IHubContext<SignalRServer> _signalRHub;
 
-
-        public IndexModel(ICategoryRepository categoryRepository, IProductRepository productRepository)
+        public IndexModel(IHubContext<SignalRServer> hub, ICategoryRepository categoryRepository, IProductRepository productRepository)
         {
             _categoryRepository = categoryRepository;
             _productRepository = productRepository;
+            _signalRHub = hub;
         }
 
         public void OnGet()
@@ -34,7 +37,7 @@ namespace PRN221_Assignment2.Pages.Cart
         public IActionResult OnPostRemove(int productId)
         {
             List<CartItem> cart = GetCartFromCookie();
-            CartItem item = cart.FirstOrDefault(p => p.Product.ProductId == productId);
+            CartItem? item = cart.FirstOrDefault(p => p.Product.ProductId == productId);
             if (item != null)
             {
                 cart.Remove(item);
@@ -48,18 +51,26 @@ namespace PRN221_Assignment2.Pages.Cart
         {
             Categories = _categoryRepository.GetCategories();
             List<CartItem> cart = GetCartFromCookie();
-            CartItem item = cart.FirstOrDefault(p => p.Product.ProductId == productId);
+            CartItem? item = cart.FirstOrDefault(p => p.Product.ProductId == productId);
             if (item != null)
             {
                 if (item.Quantity + amount == 0)
                 {
                     cart.Remove(item);
+                    TempData["success"] = "Đã xóa ra khỏi giỏ hàng";
                 }
                 else if (item.Quantity + amount <= item.Product.UnitsInStock)
                 {
                     item.Quantity += amount;
+                    TempData["success"] = "Cập nhật thành công";
                 }
+                else
+                {
+                    TempData["error"] = "Đã hết số lượng trong kho";
+                }
+                item.Product.Category = null;
             }
+            await _signalRHub.Clients.All.SendAsync("buy");
             AddToCookie(cart);
             return RedirectToPage("/Cart/Index");
         }
@@ -103,9 +114,16 @@ namespace PRN221_Assignment2.Pages.Cart
             {
                 ProductDTO? product = _productRepository.GetProduct(c.Product.ProductId);
                 //UPDATE PRODUCT 
+                product.Category.Picture = null;
+                product.Category.Products = null;
                 c.Product = product;
             });
             AddToCookie(Cart);
+        }
+
+        public IActionResult OnGetUpdateCartListComp()
+        {
+            return ViewComponent("CartList");
         }
     }
 }

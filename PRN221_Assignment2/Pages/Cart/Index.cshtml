@@ -12,6 +12,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js" type="text/javascript"></script>
     <link type="text/css" rel="stylesheet" href="~/css/cart.css">
 </head>
+
 <style>
     a {
         text-decoration: none;
@@ -51,7 +52,7 @@
                                     <th scope="col" class="text-right" width="200"></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="cart-list-part">
                                 @await Component.InvokeAsync("CartList")
                             </tbody>
                         </table>
@@ -96,17 +97,17 @@
                         <ul class="prices__items">
                             <li class="prices__item">
                                 <span class="prices__text">Tạm tính</span>
-                                <span class="prices__value">@(Model?.Cart?.Sum(i => i.Quantity * i.Product.PromotionPrice))$</span>
+                                <span class="prices__value"><span class="buy-sum-money">0</span> $</span>
                             </li>
                             <li class="prices__item">
                                 <span class="prices__text">Giảm giá</span>
-                                <span class="prices__value">0$</span>
+                                <span class="prices__value">0 $</span>
                             </li>
                         </ul>
                         <div class="prices__total">
                             <span class="prices__text">Tổng tiền</span>
                             <div class="prices__content">
-                                <span class="prices__value prices__value--final">@(Model?.Cart?.Sum(i => i.Quantity * i.Product.PromotionPrice))$</span>
+                                <span class="prices__value prices__value--final"><span class="buy-sum-money">0</span> $</span>
                                 <span class="prices__value--noted">(Đã bao gồm VAT nếu có)</span>
                             </div>
                         </div>
@@ -141,4 +142,38 @@
             }
         }
     }
+    var checkboxList = document.getElementsByName('purchase_product');
+    checkboxList.forEach(cb => {
+        cb.addEventListener('change', event => {
+            const total = recountTotalMoney(checkboxList);
+            const totalText = document.querySelectorAll('.buy-sum-money');
+            totalText[0].innerHTML = total;
+            totalText[1].innerHTML = total;
+        })
+    });
+
+    function recountTotalMoney(checkboxList) {
+        let total = 0;
+        checkboxList.forEach(cb => {
+            if (cb.checked == true) {
+                let priceItem = cb.parentElement.parentElement.parentElement.querySelector('.item-price-total').innerHTML;
+                total += parseInt(priceItem);
+            }
+        });
+        return total;
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.9/signalr.js"></script>
+
+<script>
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("/signalRHub")
+        .build();
+
+    connection.on("buy", function () {
+        $('#cart-list-part').load("/cart?handler=UpdateCartListComp");
+    });
+    connection.start().catch(function (err) {
+        console.error(err.toString());
+    });
 </script>

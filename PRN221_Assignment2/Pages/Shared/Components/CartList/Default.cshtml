@@ -1,12 +1,11 @@
 ﻿
 @model List<CartItem>
-
 @foreach (CartItem item in Model)
 {
-    <tr style="@(item.Product.UnitsInStock > 0 ? "": "opacity: 0.5;")">
+    <tr style="@item.Product.UnitsInStock @item.Quantity @(item.Product.UnitsInStock >= item.Quantity ? "": "opacity: 0.5;")">
         <td>
             <div class="buy-or-later">
-                @if (item.Product.UnitsInStock <= 0)
+                @if (item.Product.UnitsInStock <= 0 || item.Product.UnitsInStock < item.Quantity)
                 {
                     <input type="checkbox" disabled form="purchase-button" name="purchase_product" value="@item.Product.ProductId">
                 }
@@ -51,7 +50,7 @@
             @if (item.Product.UnitsInStock > 0)
             {
                 <div class="total-price-wrap">
-                    <span class="price">@(item.TotalMoney()) $</span>
+                    <span class="item-price-total">@(item.TotalMoney())</span> $
                 </div> <!-- price-wrap .// -->
             }
         </td>

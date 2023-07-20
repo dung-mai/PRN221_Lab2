@@ -68,8 +68,7 @@ namespace PRN221_Assignment2.Pages.Product
                     if(findProduct != null)
                     {
                         Reflection.CopyProperties(findProduct, Product);
-                        Product.Category.Picture = null;
-                        Product.Category.Products = null;
+                        Product.Category = null;
                     }
                     item = new()
                     {

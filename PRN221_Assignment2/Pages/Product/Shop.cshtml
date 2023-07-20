@@ -179,3 +179,16 @@
         }
     );
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.9/signalr.js"></script>
+
+<script>
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("/signalRHub")
+        .build();
+    connection.on("buy", function () {
+        $('#cart-list-part').load("/cart?handler=UpdateCartListComp");
+    })
+    connection.start().catch(function (err) {
+        console.error(err.toString());
+    });
+</script>
